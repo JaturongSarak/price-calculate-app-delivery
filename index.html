@@ -2,13 +2,48 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Price Calculate</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
 
 <body>
+
+    <div>
+        <form onsubmit="calculate(); return false;">
+            <label for="price">Price : </label>
+            <input type="number" id="price" name="price" value="Doe" required min="1">
+            <input type="submit" value="Calculate">
+        </form>
+    </div>
+
+    <div>
+        <table id="price-table">
+            <tr>
+                <th>Price</th>
+                <th>Grab & Line Man</th>
+                <th>Robinhood</th>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function calculate() {
+            price = document.getElementById("price").value;
+            table = document.getElementById("price-table");
+            row = table.insertRow(-1);
+            priceCell = row.insertCell(0);
+            glCell = row.insertCell(1);
+            rCell = row.insertCell(2);
+            priceCell.innerHTML = price
+            glCell.innerHTML = Math.ceil(price/(100-32.1)*100)
+            rCell.innerHTML = Math.ceil(price/(100-15)*100)
+        }
+    </script>
 
 </body>
 
