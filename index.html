@@ -13,16 +13,20 @@
 
 <body>
 
-    <div>
+    <div class="w3-container">
         <form onsubmit="calculate(); return false;">
-            <label for="price">Price : </label>
-            <input type="number" id="price" name="price" value="Doe" required min="1">
-            <input type="submit" value="Calculate">
+            <br>
+            <label for="price">Input Price</label><br>
+            <br>
+            <input class="w3-input w3-border" type="number" id="price" name="price" value="Doe" required min="1">
+            <br>
+            <input class="w3-btn w3-border" type="submit" value="Calculate">
         </form>
     </div>
 
-    <div>
-        <table id="price-table">
+    <div class="w3-container">
+        <br>
+        <table class="w3-table-all" id="price-table">
             <tr>
                 <th>Price</th>
                 <th>Grab & Line Man</th>
