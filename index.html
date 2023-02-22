@@ -31,6 +31,7 @@
                 <th>Price</th>
                 <th>Grab & Line Man</th>
                 <th>Robinhood</th>
+                <th>Shopee Food</th>
             </tr>
         </table>
     </div>
@@ -43,9 +44,11 @@
             priceCell = row.insertCell(0);
             glCell = row.insertCell(1);
             rCell = row.insertCell(2);
+            sCell = row.insertCell(3);
             priceCell.innerHTML = price
             glCell.innerHTML = Math.ceil(price / (100 - 32.1) * 100)
             rCell.innerHTML = Math.ceil(price / (100 - 15) * 100)
+            sCell.innerHTML = Math.ceil(price / (100 - 35) * 100)
         }
     </script>
 
